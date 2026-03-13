@@ -10,7 +10,7 @@ const About = () => {
         {/* my picture */}
         <div className="w-60 h-60 md:w-80 md:h-80 flex-shrink-0">
           <img 
-            src="/profile.png" 
+            src="/picture/terngupic.jpeg" 
             alt="Terngu" 
             className="w-full h-full object-cover rounded-2xl border-4 border-secondary shadow-xl" 
           />
