@@ -1,16 +1,40 @@
-# React + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img width="1366" height="768" alt="Portfolio Screenshot" src="https://github.com/user-attachments/assets/d2f145bd-015b-4291-aabf-e3e2fdf0c12b" />
 
-Currently, two official plugins are available:
+> A high-performance personal portfolio built to showcase Full Stack and Machine Learning projects.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Live Demo](https://my-personal-portfolio-qau6.vercel.app/)
 
-## React Compiler
+I built this project to master essential frontend engineering skills, focusing on mobile responsiveness, modern UI animations, and professional deployment workflows using Vercel.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+##  tech stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+*   **Tailwind CSS**: For utility-first styling and rapid UI development.
+*   **daisyUI**: For accessible and customizable component themes.
+*   **HTML5 & CSS3**: Core foundations for structure and custom layout design.
+*   **Vercel**: Powering the automated CI/CD pipeline and production hosting.
+
+---
+
+##  set-up
+
+1. Install the dependencies
+
+   
+```bash
+   npm install
+
+---
+
+2.  build and run for production
+npm run dev
+
+
+
+3. Generate a full static production build
+
+   ```bash
+   npm run build
