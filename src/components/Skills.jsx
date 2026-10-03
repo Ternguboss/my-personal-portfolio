@@ -1,51 +1,44 @@
 import React from "react";
 
-const skills = [
-  { name: "JavaScript", level: "90%" },
-  { name: "React", level: "85%" },
-  { name: "Node.js", level: "80%" },
-  { name: "Tailwind CSS", level: "85%" },
-  { name: "Python", level: "80%" },
-  { name: "Excel", level: "90%" },
-  { name: "Power Bi", level: "90%" },
+const filledSkills = [
+  "JavaScript",
+  "Excel",
+  "Power BI",
+  "React",
+  "Tailwind CSS",
+  "Node.js",
+  "Python",
 ];
 
 const Skills = () => {
   return (
-    <section
-      id="skills"
-      className="container mx-auto px-6 py-20"
-      data-aos="fade-up"
-    >
+    <section id="skills" className="py-16 max-w-6xl mx-auto px-6">
+      
+      {/* Header */}
+      <div 
+        className="mb-8"
+        data-aos="fade-up"
+        data-aos-duration="800"
+      >
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+          Skills
+        </h2>
+      </div>
 
-      <h2 className="text-3xl font-bold text-center mb-12">
-        Skills
-      </h2>
-
-      <div className="max-w-2xl mx-auto">
-
-        {skills.map((skill) => (
-
-          <div key={skill.name} className="mb-6">
-
-            <div className="flex justify-between mb-1">
-              <span>{skill.name}</span>
-              <span>{skill.level}</span>
-            </div>
-
-            <div className="w-full bg-gray-700 rounded-full h-2">
-
-              <div
-                className="bg-secondary h-2 rounded-full transition-all duration-1000"
-                style={{ width: skill.level }}
-              />
-
-            </div>
-
+      {/* Pill Chips Grid/Flex */}
+      <div className="flex flex-wrap gap-3 max-w-3xl">
+        {filledSkills.map((skill, index) => (
+          <div
+            key={skill}
+            className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[#4f46e5] text-white font-semibold text-sm shadow-md shadow-indigo-500/20 hover:bg-[#4338ca] transition-all duration-300 hover:scale-110 hover:shadow-indigo-500/40 select-none cursor-pointer"
+            data-aos="zoom-in"
+            data-aos-duration="600"
+            data-aos-delay={index * 80}
+          >
+            <span className="w-2 h-2 rounded-full bg-indigo-200 animate-pulse" />
+            <span>{skill}</span>
           </div>
-
         ))}
-
       </div>
 
     </section>

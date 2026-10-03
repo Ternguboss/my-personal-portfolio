@@ -4,64 +4,82 @@ import { FaBars, FaTimes } from "react-icons/fa";
 const navitems = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
-  { name: "Project", href: "#project" },
+  { name: "Work", href: "#project" },
   { name: "Skills", href: "#skills" },
   { name: "Contact", href: "#contact" },
 ];
- 
- {/*state for controlling menue bar  */}
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeItem, setActiveItem] = useState("Home");
 
   return (
-    
-    <nav className="w-full fixed top-0  backdrop-blur-md border-b border-gray-800 z-50 text-white">
-      <div className="container mx-auto flex justify-between items-center px-6 py-4">
+    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#0b0f19]/80 border-b border-slate-800/60">
+      <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
         
         {/* Logo */}
-        <a href="#home" className="text-xl font-bold tracking-widest text-white">
+        <a 
+          href="#home" 
+          onClick={() => setActiveItem("Home")}
+          className="text-base font-extrabold tracking-widest text-white hover:text-indigo-400 transition-colors uppercase"
+        >
           TERNGU
         </a>
 
-        {/* laptop Menu */}
-        <div className="hidden md:flex space-x-8">
-          {navitems.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="text-gray-300 hover:text-secondary transition-colors"
-            >
-              {item.name}
-            </a>
-          ))}
-        </div>
+        {/* Laptop / Desktop Navigation */}
+        <nav className="hidden md:flex items-center space-x-8">
+          {navitems.map((item) => {
+            const isActive = activeItem === item.name;
+            return (
+              <a
+                key={item.name}
+                href={item.href}
+                onClick={() => setActiveItem(item.name)}
+                className={`text-sm font-medium transition-all duration-200 relative py-1 ${
+                  isActive
+                    ? "text-white font-semibold after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-indigo-400 after:rounded-full"
+                    : "text-slate-400 hover:text-white"
+                }`}
+              >
+                {item.name}
+              </a>
+            );
+          })}
+        </nav>
 
-        {/* phone Menu Button */}
+        {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-2xl text-white"
+          className="md:hidden text-xl text-slate-300 hover:text-white p-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle Navigation Menu"
         >
           {isMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
 
-      {/* phone Menu */}
-      
+      {/* Mobile Menu Drawer */}
       {isMenuOpen && (
-        <div className="md:hidden flex flex-col items-center pb-6 space-y-4 border-b border-gray-800 ">
+        <div className="md:hidden bg-[#0b0f19]/95 backdrop-blur-xl border-b border-slate-800 px-6 py-6 space-y-4">
           {navitems.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              onClick={() => setIsMenuOpen(false)}
-              className="text-gray-300 hover:text-blue-500 text-lg"
+              onClick={() => {
+                setActiveItem(item.name);
+                setIsMenuOpen(false);
+              }}
+              className={`block text-base font-medium py-2 ${
+                activeItem === item.name
+                  ? "text-indigo-400 font-semibold"
+                  : "text-slate-300 hover:text-white"
+              }`}
             >
               {item.name}
             </a>
           ))}
         </div>
       )}
-    </nav>
+    </header>
   );
 };
 

@@ -2,34 +2,31 @@ import React from "react";
 
 const About = () => {
   return (
-    <section id="about" className="container mx-auto px-6 py-20" data-aos="fade-up">
-      <h2 className="text-3xl font-bold text-center mb-10 text-white">About Me</h2>
+    <section id="about" className="py-16 max-w-6xl mx-auto px-6">
       
-      <div className="flex flex-col md:flex-row items-center justify-center gap-12">
-
-        {/* my picture */}
-        <div className="w-60 h-60 md:w-80 md:h-80 flex-shrink-0">
-          <img 
-            src="/picture/terngupic.jpeg" 
-            alt="Terngu" 
-            className="w-full h-full object-cover rounded-2xl border-4 border-secondary shadow-xl" 
-          />
-        </div>
-
-        {/* about me */}
-
-        <div className="max-w-xl text-center md:text-left text-gray-300">
-          <p className="text-lg leading-relaxed">
-            I am a passionate software Developer with a focus on building 
-            modern applications. 
-            I love turning complex problems into simple and beautiful solutions .
-          </p>
-          <p className="mt-4 text-lg leading-relaxed">
-            When I'm not coding, you can find me trying out new food, watching stuff and exploring new technologies or 
-            contributing to open-source projects.
-          </p>
-        </div>
+      {/* Header */}
+      <div 
+        className="mb-8"
+        data-aos="fade-up"
+        data-aos-duration="800"
+      >
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+          About me
+        </h2>
       </div>
+
+      {/* Single Short Note Container */}
+      <div 
+        className="bg-[#131b2e] border border-slate-800/80 rounded-2xl p-6 sm:p-8 shadow-lg hover:border-indigo-500/40 transition-all duration-300 hover-glow"
+        data-aos="fade-up"
+        data-aos-duration="900"
+        data-aos-delay="100"
+      >
+        <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+          I'm a developer who loves turning complicated problems into simple, beautiful solutions. I care as much about how something feels as how it works. When I'm not coding, I'm usually trying out new food, watching something good, or poking at new tech and open-source projects.
+        </p>
+      </div>
+
     </section>
   );
 };
