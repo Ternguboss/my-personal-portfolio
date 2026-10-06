@@ -8,6 +8,20 @@ const filledSkills = [
   "Tailwind CSS",
   "Node.js",
   "Python",
+  "docker",
+  "Git",
+  "SQL",
+  "HTML",
+  "CSS",
+  "TypeScript",
+  "Next.js",
+  "Redux",
+  "REST APIs",
+  "CI/CD",
+  "Linux",
+  "Data Analysis",
+  "Data Visualization",
+
 ];
 
 const Skills = () => {

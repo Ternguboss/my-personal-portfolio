@@ -23,7 +23,10 @@ const About = () => {
         data-aos-delay="100"
       >
         <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-          I'm a developer who loves turning complicated problems into simple, beautiful solutions. I care as much about how something feels as how it works. When I'm not coding, I'm usually trying out new food, watching something good, or poking at new tech and open-source projects.
+          I'm a developer who loves turning complicated problems into simple, beautiful solutions.
+           I care as much about how something feels as how it works. When I'm not coding, 
+           I'm usually trying out new food, watching something good,
+            or poking at new tech and open-source projects.
         </p>
       </div>
 

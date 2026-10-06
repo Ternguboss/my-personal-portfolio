@@ -49,7 +49,8 @@ const Hero = () => {
             data-aos-duration="1000"
             data-aos-delay="200"
           >
-            Software developer who turns messy problems into simple, friendly products. Currently crafting web apps and making data tell better stories.
+            Software developer who turns messy problems into simple, 
+            friendly products. Currently crafting software and using data to come up with innovative solutions.
           </p>
 
           {/* CTA Buttons */}

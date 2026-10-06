@@ -5,7 +5,7 @@ const projects = [
   {
     id: "portfolio-website",
     title: "Portfolio Website",
-    description: "My corner of the internet, built with React and Tailwind.",
+    description: "My space where i showcase my work, built with React and Tailwind.",
     tags: ["React", "Tailwind"],
     image: "/picture/Screenshot of portfolio.png",
     github: "https://github.com/Ternguboss/new-portfolio-website",
